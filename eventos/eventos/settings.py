@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-9$^u$vkhw6qxe3dk(wbtvg=ao4dteiecnr@$=zpwuc#og)u2&@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['ghoulrul.alwaysdata.net']
 
 
 # Application definition
@@ -82,14 +82,9 @@ DATABASES = {
         'PASSWORD': 'P5TCZ3SYk4nqmC8',
         'HOST': 'mysql-ghoulrul.alwaysdata.net',
         'PORT': '3306',
-    }
-}
-
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'OPTIONS': {
+            "init_command": "SET sql_mode='STRICT_TRANS_TABLES', innodb_strict_mode=1",
+        },
     }
 }
 
@@ -116,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = 'es-mx'
+LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
 
