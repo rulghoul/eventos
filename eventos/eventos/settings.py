@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': 'ghoulrul_django',
         'USER': 'ghoulrul',
         'PASSWORD': 'P5TCZ3SYk4nqmC8',
-        'HOST': 'localhost',
+        'HOST': 'mysql-ghoulrul.alwaysdata.net',
         'PORT': '3306',
     }
 }
